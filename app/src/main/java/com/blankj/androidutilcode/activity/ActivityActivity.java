@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blankj.androidutilcode.R;
-import com.blankj.utilcode.utils.ActivityUtils;
+import com.blankj.utilcode.util.ActivityUtils;
 
 /**
  * <pre>
@@ -16,7 +16,6 @@ import com.blankj.utilcode.utils.ActivityUtils;
  *     desc  : Activity工具类Demo
  * </pre>
  */
-
 public class ActivityActivity extends Activity
         implements View.OnClickListener {
 
@@ -37,6 +36,7 @@ public class ActivityActivity extends Activity
 
         tvAboutActivity.setText("Is ImageActivity Exists: " + ActivityUtils.isActivityExists(packageName, className)
                 + "\ngetLauncherActivity: " + ActivityUtils.getLauncherActivity(packageName)
+                + "\ngetTopActivity: " + ActivityUtils.getTopActivity()
         );
     }
 
@@ -45,6 +45,8 @@ public class ActivityActivity extends Activity
         switch (view.getId()) {
             case R.id.btn_launch_image_activity:
                 ActivityUtils.launchActivity(packageName, className);
+                break;
+            default:
                 break;
         }
     }

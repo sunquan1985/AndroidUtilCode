@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.blankj.androidutilcode.R;
 import com.blankj.androidutilcode.activity.FragmentActivity;
-import com.blankj.utilcode.utils.FragmentUtils;
+import com.blankj.utilcode.util.FragmentUtils;
 
 import java.util.Random;
 
@@ -75,7 +75,7 @@ public class Demo1Fragment extends Fragment
                 );
                 break;
             case R.id.btn_hide_show:
-                FragmentUtils.hideShowFragment(this, ((FragmentActivity) getActivity()).rootFragment);
+                FragmentUtils.hideAllShowFragment(((FragmentActivity) getActivity()).rootFragment);
                 break;
         }
     }

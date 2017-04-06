@@ -11,6 +11,19 @@
         android:orientation="vertical"
         android:padding="@dimen/spacing_small">
 
+        <TextView
+            android:id="@+id/tv_about_fragment"
+            style="@style/Font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            />
+
+        <FrameLayout
+            android:id="@+id/child_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <Button
             android:id="@+id/btn_show_about_fragment"
             style="@style/BtnFont"
@@ -75,18 +88,12 @@
             android:text="@string/fragment.replace"
             />
 
-        <TextView
-            android:id="@+id/tv_about_fragment"
-            style="@style/Font"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/iv_shared_element"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            />
-
-        <FrameLayout
-            android:id="@+id/child_fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:src="@drawable/lena"
+            android:transitionName="@string/fragment.transition"/>
 
     </LinearLayout>
 

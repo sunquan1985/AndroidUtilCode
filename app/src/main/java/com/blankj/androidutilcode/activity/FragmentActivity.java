@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.blankj.androidutilcode.R;
 import com.blankj.androidutilcode.fragment.Demo0Fragment;
-import com.blankj.utilcode.utils.FragmentUtils;
+import com.blankj.utilcode.util.FragmentUtils;
+
+import java.util.ArrayList;
 
 /**
  * <pre>
@@ -24,7 +26,9 @@ public class FragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
-        rootFragment = FragmentUtils.addFragment(getSupportFragmentManager(), Demo0Fragment.newInstance(), R.id.fragment_container);
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(Demo0Fragment.newInstance());
+        rootFragment = FragmentUtils.addFragments(getSupportFragmentManager(), fragments, R.id.fragment_container, 0);
     }
 
 
